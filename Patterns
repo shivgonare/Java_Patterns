@@ -1,0 +1,158 @@
+Patterns 
+
+/* WAP to print
+    *
+   **
+  ***
+ ****
+*****
+*/
+class Pattern1 {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = i; j < n; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+/* WAP to print
+    1
+   22
+  333
+ 4444
+55555
+*/
+class Pattern2 {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = i; j < n; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+
+/* WAP to print
+    5
+   44
+  333
+ 4444
+55555
+*/
+class Pattern3 {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = n; i >= 1; i--) {
+            for (int j = i; j > 1; j--) {
+                System.out.print(" ");
+            }
+            for (int j = i; j <= n; j++) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+-------------------------------------------------------------
+
+/* Counter Program
+
+Summary:
+This program prints various numerical and alphabetical patterns using nested loops.
+Each class is uniquely named (Pattern1, Pattern2, etc.) for clarity.
+*/
+
+// Pattern 1
+class Pattern1 {
+ public static void main(String[] args) {
+    int n = 5;
+    int count = 1;
+	for(int i = 1; i <= n; i++) {
+		for(int j = 1; j <= i; j++) {
+			System.out.print(count + "\t");
+			count++;
+		}
+		System.out.println();
+	}
+ }
+}
+
+// Pattern 2
+class Pattern2 {
+ public static void main(String[] args) {
+    int n = 5;
+    int count = (n * (n + 1)) / 2;
+	for(int i = 1; i <= n; i++) {
+		for(int j = 1; j <= i; j++) {
+			System.out.print(count + "\t");
+			count--;
+		}
+		System.out.println();
+	}
+ }
+}
+
+// Pattern 3
+class Pattern3 {
+ public static void main(String[] args) {
+   int n = 5;
+    int count = 1;
+	for(int i = 1; i <= n; i++) {
+		int c = count;
+		for(int j = 1; j <= i; j++) {
+			System.out.print(c + "\t");
+			c--;
+		}
+		System.out.println();
+		count += i+1;
+	}
+ }
+}
+
+// Pattern 4
+class Pattern4 {
+ public static void main(String[] args) {
+    int n = 5;
+    int count = (n * (n + 1)) / 2;
+	for(int i = 1; i <= n; i++) {
+		int c = count;
+		for(int j = i; j >= 1; j--) {
+			System.out.print(c + "\t");
+			c++;
+		}
+		System.out.println();
+		count -= i+1;
+	}
+ }
+}
+
+// Pattern 5
+class Pattern5 {
+ public static void main(String[] args) {
+     int n = 5;
+     int count = 1;
+	for(int i = n; i >= 1; i--) {
+		int c = count;
+		for(int j = n; j >= i; j--) {
+			System.out.print(c + "\t");
+			c += j-1;
+		}
+		System.out.println();
+		count++;
+	}
+ }
+}
+
+--------------------------------------------------------------------
